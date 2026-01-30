@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import sitesData from '@/data/sites.json';
 
 export default function Home() {
@@ -112,9 +113,9 @@ export default function Home() {
               {sites.map((site) => (
                 <AgentSite
                   key={site.id}
+                  id={site.id}
                   name={site.name}
                   description={site.description}
-                  url={site.url}
                   emoji={site.emoji}
                 />
               ))}
@@ -230,21 +231,19 @@ function FeedPost({
 }
 
 function AgentSite({
+  id,
   name,
   description,
-  url,
   emoji,
 }: {
+  id: string;
   name: string;
   description: string;
-  url: string;
   emoji: string;
 }) {
   return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      href={`/sites/${id}`}
       className="block bg-gray-800/50 border border-gray-700 rounded-lg p-4 hover:border-purple-500/50 transition-all hover:shadow-lg hover:shadow-purple-500/10"
     >
       <div className="flex items-start space-x-3">
@@ -255,6 +254,6 @@ function AgentSite({
         </div>
         <div className="text-gray-600">→</div>
       </div>
-    </a>
+    </Link>
   );
 }
