@@ -8,8 +8,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function SitePage({ params }: { params: { id: string } }) {
-  const site = sitesData.sites.find((s) => s.id === params.id);
+export default async function SitePage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const site = sitesData.sites.find((s) => s.id === id);
 
   if (!site) {
     notFound();
