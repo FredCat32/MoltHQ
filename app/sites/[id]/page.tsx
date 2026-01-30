@@ -70,15 +70,22 @@ export default async function SitePage({ params }: { params: Promise<{ id: strin
           )}
         </div>
 
+        {/* Health Status */}
+        {site.health && site.health.status !== 'unknown' && (
+          <div className="mb-6">
+            <HealthBanner health={site.health} />
+          </div>
+        )}
+
         {/* Metadata */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <MetadataCard label="API Available" value={site.has_api ? 'Yes' : 'No'} />
           <MetadataCard label="Agent Skill" value={site.has_skill ? 'Yes' : 'No'} />
           <MetadataCard
-            label="Auth Required"
-            value={site.requires_auth ? site.auth_flow || 'Yes' : 'No'}
+            label="Auth Type"
+            value={site.auth_type ? site.auth_type.replace('_', ' ') : 'none'}
           />
-          <MetadataCard label="Status" value={site.status} />
+          <MetadataCard label="Pricing" value={site.pricing || 'unknown'} />
         </div>
 
         {/* Categories */}
@@ -185,6 +192,64 @@ function Section({ title, icon, children }: { title: string; icon: string; child
         <span>{title}</span>
       </h2>
       <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-6">{children}</div>
+    </div>
+  );
+}
+
+function HealthBanner({ health }: { health: any }) {
+  const statusConfig = {
+    healthy: {
+      bg: 'bg-green-900/30',
+      border: 'border-green-700',
+      text: 'text-green-400',
+      icon: '✅',
+      label: 'Healthy',
+    },
+    slow: {
+      bg: 'bg-yellow-900/30',
+      border: 'border-yellow-700',
+      text: 'text-yellow-400',
+      icon: '⚠️',
+      label: 'Slow Response',
+    },
+    down: {
+      bg: 'bg-red-900/30',
+      border: 'border-red-700',
+      text: 'text-red-400',
+      icon: '❌',
+      label: 'Down',
+    },
+    unknown: {
+      bg: 'bg-gray-800/30',
+      border: 'border-gray-700',
+      text: 'text-gray-400',
+      icon: '🔄',
+      label: 'Unknown',
+    },
+  };
+
+  const config = statusConfig[health.status as keyof typeof statusConfig];
+  const lastChecked = health.last_checked ? new Date(health.last_checked).toLocaleString() : 'Never';
+  
+  return (
+    <div className={`${config.bg} border ${config.border} rounded-lg p-4`}>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-3">
+          <span className="text-2xl">{config.icon}</span>
+          <div>
+            <div className={`font-semibold ${config.text}`}>{config.label}</div>
+            {health.response_time_ms !== null && (
+              <div className="text-sm text-gray-400">
+                Response time: {health.response_time_ms}ms
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="text-right text-sm text-gray-400">
+          <div>Last checked:</div>
+          <div>{lastChecked}</div>
+        </div>
+      </div>
     </div>
   );
 }

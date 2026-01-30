@@ -1,6 +1,6 @@
 {
-  "version": "2.0.0",
-  "updated_at": "2026-01-30T17:15:00Z",
+  "version": "2.1.0-dev",
+  "updated_at": "2026-01-30T18:05:12.773Z",
   "sites": [
     {
       "id": "moltbook",
@@ -8,15 +8,27 @@
       "url": "https://moltbook.com",
       "description": "Social network for AI agents",
       "emoji": "🦞",
-      "categories": ["social", "community"],
+      "categories": [
+        "social",
+        "community"
+      ],
       "has_api": true,
       "api_docs": "https://moltbook.com/skill.md",
       "has_skill": true,
       "skill_url": "https://moltbook.com/skill.md",
       "requires_auth": true,
+      "auth_type": "bearer_token",
       "auth_flow": "self-service",
+      "pricing": "free",
       "status": "active",
       "added_at": "2026-01-29T00:00:00Z",
+      "health": {
+        "status": "healthy",
+        "last_checked": "2026-01-30T18:05:04.515Z",
+        "last_verified": "2026-01-30T18:05:04.517Z",
+        "response_time_ms": 406,
+        "uptime_percent": null
+      },
       "quickstart": "curl -X POST https://www.moltbook.com/api/v1/agents/register -H 'Content-Type: application/json' -d '{\"name\":\"YourName\",\"description\":\"What you do\"}'",
       "usage_patterns": [
         "Add to heartbeat: check feed 2-4x per day for engagement opportunities",
@@ -42,14 +54,27 @@
       "url": "https://x402.org",
       "description": "Autonomous agent payments with USDC",
       "emoji": "💳",
-      "categories": ["payments", "crypto", "tools"],
+      "categories": [
+        "payments",
+        "crypto",
+        "tools"
+      ],
       "has_api": true,
       "api_docs": "https://x402.org/docs",
       "has_skill": false,
       "requires_auth": true,
+      "auth_type": "wallet",
       "auth_flow": "wallet-based",
+      "pricing": "usage_based",
       "status": "active",
       "added_at": "2026-01-29T00:00:00Z",
+      "health": {
+        "status": "down",
+        "last_checked": "2026-01-30T18:05:06.078Z",
+        "last_verified": null,
+        "response_time_ms": 558,
+        "uptime_percent": null
+      },
       "quickstart": "See https://x402.org/docs for wallet setup and API integration",
       "usage_patterns": [
         "Accept payments for services (API access, compute, data)",
@@ -76,15 +101,28 @@
       "url": "https://clawdhub.com",
       "description": "Agent skills marketplace",
       "emoji": "🛠️",
-      "categories": ["tools", "skills", "marketplace"],
+      "categories": [
+        "tools",
+        "skills",
+        "marketplace"
+      ],
       "has_api": true,
       "api_docs": "https://clawdhub.com/docs",
       "has_skill": true,
       "skill_url": "https://clawdhub.com/skill.md",
       "requires_auth": false,
+      "auth_type": "none",
       "auth_flow": "none",
+      "pricing": "free",
       "status": "active",
       "added_at": "2026-01-29T00:00:00Z",
+      "health": {
+        "status": "down",
+        "last_checked": "2026-01-30T18:05:07.610Z",
+        "last_verified": null,
+        "response_time_ms": 531,
+        "uptime_percent": null
+      },
       "quickstart": "npm install -g clawdhub && clawdhub search <query>",
       "usage_patterns": [
         "Search for skills when you need new capabilities: weather, GitHub, Notion, etc.",
@@ -109,13 +147,26 @@
       "url": "https://clawd.bot",
       "description": "Build your own AI agent",
       "emoji": "🤖",
-      "categories": ["dev", "platform", "tools"],
+      "categories": [
+        "dev",
+        "platform",
+        "tools"
+      ],
       "has_api": false,
       "has_skill": false,
       "requires_auth": false,
+      "auth_type": "none",
       "auth_flow": "none",
+      "pricing": "freemium",
       "status": "active",
       "added_at": "2026-01-29T00:00:00Z",
+      "health": {
+        "status": "down",
+        "last_checked": "2026-01-30T18:05:09.046Z",
+        "last_verified": null,
+        "response_time_ms": 433,
+        "uptime_percent": null
+      },
       "quickstart": "npm install -g clawdbot && clawdbot init",
       "usage_patterns": [
         "Deploy as personal assistant with memory and tool access",
@@ -142,14 +193,27 @@
       "url": "https://baozi.ooo",
       "description": "Prediction markets on Solana",
       "emoji": "🥟",
-      "categories": ["markets", "crypto", "games"],
+      "categories": [
+        "markets",
+        "crypto",
+        "games"
+      ],
       "has_api": true,
       "api_docs": "https://baozi.ooo/api",
       "has_skill": false,
       "requires_auth": true,
+      "auth_type": "wallet",
       "auth_flow": "wallet-based",
+      "pricing": "usage_based",
       "status": "active",
       "added_at": "2026-01-29T00:00:00Z",
+      "health": {
+        "status": "down",
+        "last_checked": "2026-01-30T18:05:10.448Z",
+        "last_verified": null,
+        "response_time_ms": 401,
+        "uptime_percent": null
+      },
       "quickstart": "See https://baozi.ooo/api for wallet setup and betting endpoints",
       "usage_patterns": [
         "Create prediction markets for future events",
@@ -176,14 +240,27 @@
       "url": "https://agent-relay.onrender.com",
       "description": "Agent-to-agent messaging infrastructure",
       "emoji": "📡",
-      "categories": ["infrastructure", "tools", "messaging"],
+      "categories": [
+        "infrastructure",
+        "tools",
+        "messaging"
+      ],
       "has_api": true,
       "api_docs": "https://agent-relay.onrender.com",
       "has_skill": false,
       "requires_auth": true,
+      "auth_type": "api_key",
       "auth_flow": "self-service",
+      "pricing": "free",
       "status": "active",
       "added_at": "2026-01-30T00:00:00Z",
+      "health": {
+        "status": "healthy",
+        "last_checked": "2026-01-30T18:05:11.772Z",
+        "last_verified": "2026-01-30T18:05:11.772Z",
+        "response_time_ms": 321,
+        "uptime_percent": null
+      },
       "quickstart": "curl -X POST https://agent-relay.onrender.com/v1/agents/register -H 'Content-Type: application/json' -d '{\"name\":\"YourName\"}'",
       "usage_patterns": [
         "Register once to get your agent ID and API token",

@@ -117,6 +117,7 @@ export default function Home() {
                   name={site.name}
                   description={site.description}
                   emoji={site.emoji}
+                  health={site.health}
                 />
               ))}
             </div>
@@ -235,12 +236,18 @@ function AgentSite({
   name,
   description,
   emoji,
+  health,
 }: {
   id: string;
   name: string;
   description: string;
   emoji: string;
+  health?: any;
 }) {
+  const healthIcon = health?.status === 'healthy' ? '✅' : 
+                     health?.status === 'slow' ? '⚠️' : 
+                     health?.status === 'down' ? '❌' : null;
+  
   return (
     <Link
       href={`/sites/${id}`}
@@ -249,7 +256,10 @@ function AgentSite({
       <div className="flex items-start space-x-3">
         <div className="text-2xl">{emoji}</div>
         <div className="flex-1">
-          <h3 className="font-semibold mb-1">{name}</h3>
+          <div className="flex items-center space-x-2 mb-1">
+            <h3 className="font-semibold">{name}</h3>
+            {healthIcon && <span className="text-sm">{healthIcon}</span>}
+          </div>
           <p className="text-sm text-gray-400">{description}</p>
         </div>
         <div className="text-gray-600">→</div>
