@@ -1,0 +1,134 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-01-30T16:00:00Z",
+  "sites": [
+    {
+      "id": "moltbook",
+      "name": "Moltbook",
+      "url": "https://moltbook.com",
+      "description": "Social network for AI agents",
+      "emoji": "🦞",
+      "categories": ["social", "community"],
+      "has_api": true,
+      "api_docs": "https://moltbook.com/skill.md",
+      "has_skill": true,
+      "skill_url": "https://moltbook.com/skill.md",
+      "requires_auth": true,
+      "status": "active",
+      "added_at": "2026-01-29T00:00:00Z"
+    },
+    {
+      "id": "x402",
+      "name": "x402 Protocol",
+      "url": "https://x402.org",
+      "description": "Autonomous agent payments with USDC",
+      "emoji": "💳",
+      "categories": ["payments", "crypto", "tools"],
+      "has_api": true,
+      "api_docs": "https://x402.org/docs",
+      "has_skill": false,
+      "requires_auth": true,
+      "status": "active",
+      "added_at": "2026-01-29T00:00:00Z"
+    },
+    {
+      "id": "clawdhub",
+      "name": "ClawdHub",
+      "url": "https://clawdhub.com",
+      "description": "Agent skills marketplace",
+      "emoji": "🛠️",
+      "categories": ["tools", "skills", "marketplace"],
+      "has_api": true,
+      "api_docs": "https://clawdhub.com/docs",
+      "has_skill": true,
+      "skill_url": "https://clawdhub.com/skill.md",
+      "requires_auth": false,
+      "status": "active",
+      "added_at": "2026-01-29T00:00:00Z"
+    },
+    {
+      "id": "clawdbot",
+      "name": "Clawdbot",
+      "url": "https://clawd.bot",
+      "description": "Build your own AI agent",
+      "emoji": "🤖",
+      "categories": ["dev", "platform", "tools"],
+      "has_api": false,
+      "has_skill": false,
+      "requires_auth": false,
+      "status": "active",
+      "added_at": "2026-01-29T00:00:00Z"
+    },
+    {
+      "id": "baozi",
+      "name": "Baozi",
+      "url": "https://baozi.ooo",
+      "description": "Prediction markets on Solana",
+      "emoji": "🥟",
+      "categories": ["markets", "crypto", "games"],
+      "has_api": true,
+      "api_docs": "https://baozi.ooo/api",
+      "has_skill": false,
+      "requires_auth": true,
+      "status": "active",
+      "added_at": "2026-01-29T00:00:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "social",
+      "name": "Social",
+      "description": "Social networks and community platforms"
+    },
+    {
+      "id": "tools",
+      "name": "Tools",
+      "description": "Utilities and development tools"
+    },
+    {
+      "id": "payments",
+      "name": "Payments",
+      "description": "Payment processing and financial tools"
+    },
+    {
+      "id": "crypto",
+      "name": "Crypto",
+      "description": "Blockchain and cryptocurrency platforms"
+    },
+    {
+      "id": "markets",
+      "name": "Markets",
+      "description": "Prediction and trading markets"
+    },
+    {
+      "id": "skills",
+      "name": "Skills",
+      "description": "Agent skills and capabilities"
+    },
+    {
+      "id": "marketplace",
+      "name": "Marketplace",
+      "description": "Buying and selling platforms"
+    },
+    {
+      "id": "dev",
+      "name": "Development",
+      "description": "Development platforms and services"
+    },
+    {
+      "id": "platform",
+      "name": "Platform",
+      "description": "Core platforms and infrastructure"
+    },
+    {
+      "id": "community",
+      "name": "Community",
+      "description": "Community-focused platforms"
+    },
+    {
+      "id": "games",
+      "name": "Games",
+      "description": "Gaming and entertainment platforms"
+    }
+  ]
+}

@@ -1,4 +1,9 @@
+import sitesData from '@/data/sites.json';
+
 export default function Home() {
+  const sites = sitesData.sites;
+  const siteCount = sites.length;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
       {/* Hero */}
@@ -44,7 +49,7 @@ export default function Home() {
           <StatCard
             emoji="🌐"
             label="Agent Sites"
-            value="10+"
+            value={`${siteCount}`}
             subtitle="curated links"
           />
         </div>
@@ -104,36 +109,15 @@ export default function Home() {
               <span>Agent Sites</span>
             </h2>
             <div className="space-y-3">
-              <AgentSite
-                name="Moltbook"
-                description="Social network for AI agents"
-                url="https://moltbook.com"
-                emoji="🦞"
-              />
-              <AgentSite
-                name="x402 Protocol"
-                description="Autonomous agent payments with USDC"
-                url="https://x402.org"
-                emoji="💳"
-              />
-              <AgentSite
-                name="ClawdHub"
-                description="Agent skills marketplace"
-                url="https://clawdhub.com"
-                emoji="🛠️"
-              />
-              <AgentSite
-                name="Clawdbot"
-                description="Build your own AI agent"
-                url="https://clawd.bot"
-                emoji="🤖"
-              />
-              <AgentSite
-                name="Baozi"
-                description="Prediction markets on Solana"
-                url="https://baozi.ooo"
-                emoji="🥟"
-              />
+              {sites.map((site) => (
+                <AgentSite
+                  key={site.id}
+                  name={site.name}
+                  description={site.description}
+                  url={site.url}
+                  emoji={site.emoji}
+                />
+              ))}
             </div>
 
             {/* Submit Form */}
@@ -156,6 +140,17 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="mt-16 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">
+          <p className="mb-2">
+            <a
+              href="/api/sites"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 font-mono"
+            >
+              /api/sites
+            </a>{" "}
+            • Agent-friendly JSON API
+          </p>
           <p>
             Built by{" "}
             <a
