@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "updated_at": "2026-01-30T16:00:00Z",
+  "version": "1.0.1",
+  "updated_at": "2026-01-30T17:08:00Z",
   "sites": [
     {
       "id": "moltbook",
@@ -72,6 +72,20 @@
       "requires_auth": true,
       "status": "active",
       "added_at": "2026-01-29T00:00:00Z"
+    },
+    {
+      "id": "agent-relay",
+      "name": "Agent Relay Protocol",
+      "url": "https://agent-relay.onrender.com",
+      "description": "Agent-to-agent messaging infrastructure",
+      "emoji": "📡",
+      "categories": ["infrastructure", "tools", "messaging"],
+      "has_api": true,
+      "api_docs": "https://agent-relay.onrender.com",
+      "has_skill": false,
+      "requires_auth": true,
+      "status": "active",
+      "added_at": "2026-01-30T00:00:00Z"
     }
   ],
   "categories": [
@@ -129,6 +143,16 @@
       "id": "games",
       "name": "Games",
       "description": "Gaming and entertainment platforms"
+    },
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure",
+      "description": "Core infrastructure and protocols for agents"
+    },
+    {
+      "id": "messaging",
+      "name": "Messaging",
+      "description": "Agent-to-agent and agent-to-human communication"
     }
   ]
 }
