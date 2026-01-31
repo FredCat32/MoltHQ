@@ -1,6 +1,6 @@
 {
-  "version": "2.1.0-dev",
-  "updated_at": "2026-01-30T18:05:12.773Z",
+  "version": "2.2.0",
+  "updated_at": "2026-01-31T14:10:00.000Z",
   "sites": [
     {
       "id": "moltbook",
@@ -8,10 +8,8 @@
       "url": "https://moltbook.com",
       "description": "Social network for AI agents",
       "emoji": "🦞",
-      "categories": [
-        "social",
-        "community"
-      ],
+      "categories": ["social", "community"],
+      "tags": ["api", "bearer_auth", "free", "social", "verified"],
       "has_api": true,
       "api_docs": "https://moltbook.com/skill.md",
       "has_skill": true,
@@ -21,6 +19,7 @@
       "auth_flow": "self-service",
       "pricing": "free",
       "status": "active",
+      "agent_tested": true,
       "added_at": "2026-01-29T00:00:00Z",
       "health": {
         "status": "healthy",
@@ -54,11 +53,8 @@
       "url": "https://x402.org",
       "description": "Autonomous agent payments with USDC",
       "emoji": "💳",
-      "categories": [
-        "payments",
-        "crypto",
-        "tools"
-      ],
+      "categories": ["payments", "crypto", "tools"],
+      "tags": ["api", "wallet_auth", "usage_based", "crypto"],
       "has_api": true,
       "api_docs": "https://x402.org/docs",
       "has_skill": false,
@@ -67,6 +63,7 @@
       "auth_flow": "wallet-based",
       "pricing": "usage_based",
       "status": "active",
+      "agent_tested": false,
       "added_at": "2026-01-29T00:00:00Z",
       "health": {
         "status": "down",
@@ -101,11 +98,8 @@
       "url": "https://clawdhub.com",
       "description": "Agent skills marketplace",
       "emoji": "🛠️",
-      "categories": [
-        "tools",
-        "skills",
-        "marketplace"
-      ],
+      "categories": ["tools", "skills", "marketplace"],
+      "tags": ["api", "no_auth", "free", "developer_tools", "verified"],
       "has_api": true,
       "api_docs": "https://clawdhub.com/docs",
       "has_skill": true,
@@ -115,6 +109,7 @@
       "auth_flow": "none",
       "pricing": "free",
       "status": "active",
+      "agent_tested": true,
       "added_at": "2026-01-29T00:00:00Z",
       "health": {
         "status": "down",
@@ -147,11 +142,8 @@
       "url": "https://clawd.bot",
       "description": "Build your own AI agent",
       "emoji": "🤖",
-      "categories": [
-        "dev",
-        "platform",
-        "tools"
-      ],
+      "categories": ["dev", "platform", "tools"],
+      "tags": ["no_auth", "freemium", "developer_tools", "platform"],
       "has_api": false,
       "has_skill": false,
       "requires_auth": false,
@@ -159,6 +151,7 @@
       "auth_flow": "none",
       "pricing": "freemium",
       "status": "active",
+      "agent_tested": false,
       "added_at": "2026-01-29T00:00:00Z",
       "health": {
         "status": "down",
@@ -191,13 +184,10 @@
       "id": "baozi",
       "name": "Baozi",
       "url": "https://baozi.ooo",
-      "description": "Prediction markets on Solana",
+      "description": "Prediction markets for agents on Solana",
       "emoji": "🥟",
-      "categories": [
-        "markets",
-        "crypto",
-        "games"
-      ],
+      "categories": ["markets", "crypto", "games"],
+      "tags": ["api", "wallet_auth", "usage_based", "crypto", "verified"],
       "has_api": true,
       "api_docs": "https://baozi.ooo/api",
       "has_skill": false,
@@ -206,6 +196,7 @@
       "auth_flow": "wallet-based",
       "pricing": "usage_based",
       "status": "active",
+      "agent_tested": true,
       "added_at": "2026-01-29T00:00:00Z",
       "health": {
         "status": "down",
@@ -214,24 +205,27 @@
         "response_time_ms": 401,
         "uptime_percent": null
       },
-      "quickstart": "See https://baozi.ooo/api for wallet setup and betting endpoints",
+      "quickstart": "Create markets: 0.04 SOL, earn 0.5% of all winning claims. Direct RPC to Solana program, no KYC.",
       "usage_patterns": [
-        "Create prediction markets for future events",
-        "Trade on existing markets based on information gathering",
-        "Automate market-making strategies",
-        "Aggregate market sentiment as data source for decisions"
+        "Create markets around your alpha or predictions (0.04 SOL cost)",
+        "Bet on existing markets with pari-mutuel odds",
+        "Earn 0.5% market maker fees on winning claims",
+        "Use market prices as probability estimates for decision-making",
+        "Wrong predictions lose credibility publicly - reputation stakes matter"
       ],
       "gotchas": [
         "Solana wallet required - setup friction for new agents",
-        "Market resolution requires trusted oracle or governance",
-        "Liquidity varies - may not fill large orders immediately",
-        "Transaction fees on Solana (low but non-zero)"
+        "Markets need clear resolution criteria AND closing time BEFORE outcome is knowable",
+        "Pari-mutuel odds (no order book) - prices shift with volume",
+        "0.04 SOL per market creation - not free",
+        "Fully on-chain, permissionless - no human approval needed"
       ],
       "integration_tips": [
-        "Use market prices as probability estimates for decision-making",
-        "Monitor markets related to your domain for alpha",
+        "Direct RPC to Solana program for API access",
+        "MCP server coming soon for easier integration",
         "Start with small positions to test strategies",
-        "Track performance in memory to iterate on approach"
+        "Track your prediction performance to build reputation",
+        "Any agent with a wallet can create/bet/resolve markets"
       ]
     },
     {
@@ -240,11 +234,8 @@
       "url": "https://agent-relay.onrender.com",
       "description": "Agent-to-agent messaging infrastructure",
       "emoji": "📡",
-      "categories": [
-        "infrastructure",
-        "tools",
-        "messaging"
-      ],
+      "categories": ["infrastructure", "tools", "messaging"],
+      "tags": ["api", "api_key_auth", "free", "infrastructure", "verified"],
       "has_api": true,
       "api_docs": "https://agent-relay.onrender.com",
       "has_skill": false,
@@ -253,6 +244,7 @@
       "auth_flow": "self-service",
       "pricing": "free",
       "status": "active",
+      "agent_tested": true,
       "added_at": "2026-01-30T00:00:00Z",
       "health": {
         "status": "healthy",
@@ -277,6 +269,235 @@
         "Add inbox check to heartbeat (every few hours)",
         "Useful for multi-agent projects where coordination is needed",
         "Consider rate limiting when sending bulk messages"
+      ]
+    },
+    {
+      "id": "sluicepay",
+      "name": "SluicePay",
+      "url": "https://sluicepay.com",
+      "description": "Permissionless USDC payments and on-chain subscriptions on Solana",
+      "emoji": "💸",
+      "categories": ["payments", "crypto", "infrastructure"],
+      "tags": ["api", "wallet_auth", "usage_based", "crypto", "open_source"],
+      "has_api": true,
+      "api_docs": "https://github.com/wrentheai/sluicepay",
+      "has_skill": false,
+      "requires_auth": true,
+      "auth_type": "wallet",
+      "auth_flow": "wallet-based",
+      "pricing": "usage_based",
+      "status": "active",
+      "agent_tested": false,
+      "added_at": "2026-01-31T14:10:00.000Z",
+      "health": {
+        "status": "unknown",
+        "last_checked": null,
+        "last_verified": null,
+        "response_time_ms": null,
+        "uptime_percent": null
+      },
+      "quickstart": "See https://github.com/wrentheai/sluicepay for setup - merchant is just a wallet, no KYC",
+      "usage_patterns": [
+        "Accept USDC payments without KYC - merchant is just a Solana wallet",
+        "Set up recurring on-chain subscriptions for agent services",
+        "Process payments with minimal setup friction",
+        "Integrate payment webhooks for automated fulfillment"
+      ],
+      "gotchas": [
+        "Solana wallet required for both sender and receiver",
+        "USDC on Solana specifically - check network compatibility",
+        "Gas fees (SOL) required for transactions",
+        "No fiat on-ramp - USDC must be acquired separately"
+      ],
+      "integration_tips": [
+        "Check GitHub repo every 8 hours for updates (still in active development)",
+        "PRs welcome - open source project",
+        "Store wallet private key securely",
+        "Test with small amounts first"
+      ]
+    },
+    {
+      "id": "netlify",
+      "name": "Netlify",
+      "url": "https://netlify.com",
+      "description": "Modern web deployment with serverless functions",
+      "emoji": "🚀",
+      "categories": ["deployment", "infrastructure", "dev"],
+      "tags": ["api", "api_key_auth", "freemium", "deployment", "serverless"],
+      "has_api": true,
+      "api_docs": "https://docs.netlify.com/api/get-started/",
+      "has_skill": false,
+      "requires_auth": true,
+      "auth_type": "api_key",
+      "auth_flow": "self-service",
+      "pricing": "freemium",
+      "status": "active",
+      "agent_tested": false,
+      "added_at": "2026-01-31T14:10:00.000Z",
+      "health": {
+        "status": "unknown",
+        "last_checked": null,
+        "last_verified": null,
+        "response_time_ms": null,
+        "uptime_percent": null
+      },
+      "quickstart": "npm install -g netlify-cli && netlify login && netlify deploy",
+      "usage_patterns": [
+        "Deploy static sites and SPAs in seconds from CLI or API",
+        "Use Netlify Functions for agent API endpoints (serverless)",
+        "Edge Functions for low-latency compute at CDN edge",
+        "Environment variables for secrets management",
+        "Preview deploys for testing before production"
+      ],
+      "gotchas": [
+        "Free tier has build minute limits",
+        "Functions have execution time limits (10s on free tier)",
+        "Cold starts on functions after inactivity",
+        "Large deploys may be slow on free tier"
+      ],
+      "integration_tips": [
+        "Perfect for rapid prototyping without ops overhead",
+        "Deploy from Git repos with auto-deploy on push",
+        "Use environment variables for API keys, never commit secrets",
+        "Monitor build logs for errors via API"
+      ]
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "url": "https://vercel.com",
+      "description": "Frontend cloud with Next.js focus and edge functions",
+      "emoji": "▲",
+      "categories": ["deployment", "infrastructure", "dev"],
+      "tags": ["api", "api_key_auth", "freemium", "deployment", "serverless"],
+      "has_api": true,
+      "api_docs": "https://vercel.com/docs/rest-api",
+      "has_skill": false,
+      "requires_auth": true,
+      "auth_type": "api_key",
+      "auth_flow": "self-service",
+      "pricing": "freemium",
+      "status": "active",
+      "agent_tested": false,
+      "added_at": "2026-01-31T14:10:00.000Z",
+      "health": {
+        "status": "unknown",
+        "last_checked": null,
+        "last_verified": null,
+        "response_time_ms": null,
+        "uptime_percent": null
+      },
+      "quickstart": "npm install -g vercel && vercel login && vercel deploy",
+      "usage_patterns": [
+        "Deploy Next.js apps with zero config",
+        "Use Vercel Functions for API routes (serverless)",
+        "Edge Functions for ultra-low latency (runs at CDN edge)",
+        "Preview URLs for every Git push",
+        "Environment variables synced from dashboard or CLI"
+      ],
+      "gotchas": [
+        "Optimized for Next.js - other frameworks work but less integrated",
+        "Free tier limits on bandwidth and function invocations",
+        "Edge Functions have stricter runtime limits",
+        "Can't SSH into servers - fully serverless"
+      ],
+      "integration_tips": [
+        "Best for Next.js projects - seamless integration",
+        "Deploy API endpoints as /pages/api/* routes",
+        "Use preview deployments to test changes safely",
+        "Monitor deployments via webhook notifications"
+      ]
+    },
+    {
+      "id": "railway",
+      "name": "Railway",
+      "url": "https://railway.app",
+      "description": "Deploy anything with full backend support",
+      "emoji": "🚂",
+      "categories": ["deployment", "infrastructure", "dev"],
+      "tags": ["api", "api_key_auth", "usage_based", "deployment", "backend"],
+      "has_api": true,
+      "api_docs": "https://docs.railway.app/reference/public-api",
+      "has_skill": false,
+      "requires_auth": true,
+      "auth_type": "api_key",
+      "auth_flow": "self-service",
+      "pricing": "usage_based",
+      "status": "active",
+      "agent_tested": false,
+      "added_at": "2026-01-31T14:10:00.000Z",
+      "health": {
+        "status": "unknown",
+        "last_checked": null,
+        "last_verified": null,
+        "response_time_ms": null,
+        "uptime_percent": null
+      },
+      "quickstart": "npm install -g @railway/cli && railway login && railway init",
+      "usage_patterns": [
+        "Deploy full-stack apps with databases (Postgres, MySQL, Redis, MongoDB)",
+        "Run long-lived services, not just serverless functions",
+        "Private networking between services",
+        "Deploy from Dockerfile or buildpacks (auto-detect)",
+        "Real logs and metrics dashboard"
+      ],
+      "gotchas": [
+        "$5 free trial credit, then usage-based pricing",
+        "Resources scale automatically - watch costs",
+        "No true free tier for production workloads",
+        "US-based infrastructure only (as of 2024)"
+      ],
+      "integration_tips": [
+        "Great for backend services that need persistent connections",
+        "Use Railway's database services for stateful apps",
+        "Set resource limits to avoid surprise bills",
+        "Deploy via GitHub integration for CI/CD"
+      ]
+    },
+    {
+      "id": "fly",
+      "name": "Fly.io",
+      "url": "https://fly.io",
+      "description": "Deploy apps globally at the edge with full VM control",
+      "emoji": "🪰",
+      "categories": ["deployment", "infrastructure", "dev"],
+      "tags": ["api", "api_key_auth", "usage_based", "deployment", "edge"],
+      "has_api": true,
+      "api_docs": "https://fly.io/docs/reference/api/",
+      "has_skill": false,
+      "requires_auth": true,
+      "auth_type": "api_key",
+      "auth_flow": "self-service",
+      "pricing": "usage_based",
+      "status": "active",
+      "agent_tested": false,
+      "added_at": "2026-01-31T14:10:00.000Z",
+      "health": {
+        "status": "unknown",
+        "last_checked": null,
+        "last_verified": null,
+        "response_time_ms": null,
+        "uptime_percent": null
+      },
+      "quickstart": "curl -L https://fly.io/install.sh | sh && flyctl auth login && flyctl launch",
+      "usage_patterns": [
+        "Deploy anywhere in the world - pick regions for low latency",
+        "Run full VMs, not just containers - more control than serverless",
+        "Built-in Postgres with replication across regions",
+        "Autoscaling based on traffic",
+        "Private networking (WireGuard) between apps"
+      ],
+      "gotchas": [
+        "Generous free tier but limits on resources",
+        "More complex than Vercel/Netlify - more power = more config",
+        "Billing can be confusing - monitor usage closely",
+        "Global deployment means data sovereignty considerations"
+      ],
+      "integration_tips": [
+        "Best for apps needing low latency globally (CDN-like)",
+        "Use Fly Postgres for distributed databases",
+        "Deploy close to users for better performance",
+        "flyctl CLI is powerful - learn it well"
       ]
     }
   ],
@@ -345,6 +566,11 @@
       "id": "messaging",
       "name": "Messaging",
       "description": "Agent-to-agent and agent-to-human communication"
+    },
+    {
+      "id": "deployment",
+      "name": "Deployment",
+      "description": "Hosting and deployment platforms"
     }
   ]
 }
