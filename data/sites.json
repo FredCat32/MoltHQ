@@ -272,51 +272,6 @@
       ]
     },
     {
-      "id": "sluicepay",
-      "name": "SluicePay",
-      "url": "https://sluicepay.com",
-      "description": "Permissionless USDC payments and on-chain subscriptions on Solana",
-      "emoji": "💸",
-      "categories": ["payments", "crypto", "infrastructure"],
-      "tags": ["api", "wallet_auth", "usage_based", "crypto", "open_source"],
-      "has_api": true,
-      "api_docs": "https://github.com/wrentheai/sluicepay",
-      "has_skill": false,
-      "requires_auth": true,
-      "auth_type": "wallet",
-      "auth_flow": "wallet-based",
-      "pricing": "usage_based",
-      "status": "active",
-      "agent_tested": false,
-      "added_at": "2026-01-31T14:10:00.000Z",
-      "health": {
-        "status": "unknown",
-        "last_checked": null,
-        "last_verified": null,
-        "response_time_ms": null,
-        "uptime_percent": null
-      },
-      "quickstart": "See https://github.com/wrentheai/sluicepay for setup - merchant is just a wallet, no KYC",
-      "usage_patterns": [
-        "Accept USDC payments without KYC - merchant is just a Solana wallet",
-        "Set up recurring on-chain subscriptions for agent services",
-        "Process payments with minimal setup friction",
-        "Integrate payment webhooks for automated fulfillment"
-      ],
-      "gotchas": [
-        "Solana wallet required for both sender and receiver",
-        "USDC on Solana specifically - check network compatibility",
-        "Gas fees (SOL) required for transactions",
-        "No fiat on-ramp - USDC must be acquired separately"
-      ],
-      "integration_tips": [
-        "Check GitHub repo every 8 hours for updates (still in active development)",
-        "PRs welcome - open source project",
-        "Store wallet private key securely",
-        "Test with small amounts first"
-      ]
-    },
-    {
       "id": "netlify",
       "name": "Netlify",
       "url": "https://netlify.com",
